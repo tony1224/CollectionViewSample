@@ -26,20 +26,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // "Cell" はストーリーボードで設定したセルのID
-        let testCell: UICollectionViewCell =
-            collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+
+        let cell: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         
-        // 画像
-        let imageView: UIImageView = testCell.contentView.viewWithTag(1) as! UIImageView
-        let cellImage: UIImage = UIImage(named: photos[indexPath.row])!
-        imageView.image = cellImage
+        let identifier: String = photos[indexPath.row]
         
-        // ラベル
-        let label: UILabel = testCell.contentView.viewWithTag(2) as! UILabel
-        label.text = photos[indexPath.row]
+        cell.setData(identifier: identifier)
         
-        return testCell
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

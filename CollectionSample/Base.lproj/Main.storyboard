@@ -29,18 +29,18 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" reuseIdentifier="Cell" id="tz2-Bj-gye">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" reuseIdentifier="CollectionViewCell" id="tz2-Bj-gye" customClass="CollectionViewCell" customModule="CollectionSample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="137" height="126"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="137" height="126"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAm-9G-2TD">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAm-9G-2TD">
                                                     <rect key="frame" x="0.0" y="0.0" width="137" height="126"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyK-6p-2f6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyK-6p-2f6">
                                                     <rect key="frame" x="30" y="85" width="77" height="21"/>
                                                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -57,6 +57,10 @@
                                             <constraint firstAttribute="bottomMargin" secondItem="WyK-6p-2f6" secondAttribute="bottom" constant="12" id="5v8-iA-9N1"/>
                                             <constraint firstItem="WyK-6p-2f6" firstAttribute="centerX" secondItem="tz2-Bj-gye" secondAttribute="centerX" id="brZ-kM-hcm"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="mAm-9G-2TD" id="pVf-V5-8UN"/>
+                                            <outlet property="label" destination="WyK-6p-2f6" id="5cA-b0-Etx"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
